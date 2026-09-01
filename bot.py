@@ -2019,8 +2019,8 @@ def other_page(key):
 def run_panel():
 
     app.run(
-        host="127.0.0.1",
-        port=5000,
+        host="0.0.0.0",
+        port=int(os.getenv("PORT", 5000)),
         debug=False,
         use_reloader=False
     )
